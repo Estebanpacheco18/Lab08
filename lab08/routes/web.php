@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/saludo', function () {
+    return 'Bienvenid@ ' . 'Esteban';
+});
+
 Route::get('/greeting/{name}', function ($name) {
     return view('greeting', ['name' => $name]);
 });
